@@ -1,6 +1,0 @@
-#get serial
-$SerialNumber = (Get-WmiObject -class win32_bios).SerialNumber
-#set new name
-$computer = "BJ-$SerialNumber" 
-#join domain
-Add-Computer -DomainName Domain02 -NewName $computer -Credential labdom\fddj -Restart
