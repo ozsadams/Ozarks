@@ -5,8 +5,9 @@ $SerialNumber = (Get-WmiObject -class win32_bios).SerialNumber
 $computer = "$SerialNumber"
 
 #get credentials
-$user = "labdom\fddj"
-$pass = "<a>k@B7hK)5,ns}F"
+$user = $args[0]
+$pass = $args[1]
+
 $joincred = New-Object pscredential -argumentlist ([pscustomobject]@{
 UserName = $user
 Password = (ConvertTo-SecureString -String $pass -asplaintext -force)[0]
