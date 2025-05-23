@@ -6,7 +6,7 @@ $computer = "$SerialNumber"
 
 #get credentials
 $user = $args[0]
-$pass = $args[1]
+$pass = "<a>k@B7hK)5,ns}F"
 $joincred = New-Object pscredential -argumentlist ([pscustomobject]@{
 UserName = $user
 Password = (ConvertTo-SecureString -String $pass -asplaintext -force)[0]
